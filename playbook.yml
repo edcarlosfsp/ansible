@@ -1,0 +1,16 @@
+---
+- hosts: all
+  tasks:
+   - name: 'instalar vim'
+     become: yes
+     ansible.builtin.apt:
+       name: vim
+       state: latest
+       update_cache: yes
+     #become_user: root
+
+#- hosts: all
+ # tasks:
+  # - name: Show disk usage
+   #  shell: mkdir zid
+    # become: yes
